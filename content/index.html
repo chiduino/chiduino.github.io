@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://chiduino.com/works/new -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Chiduino - 才讀立懂</title>
+  <link rel="stylesheet" media="all" href="application-0927.css" data-turbolinks-track="false">
+  <script src="application-0927.js" data-turbolinks-track="false"></script>
+  <script src="chiduino-0927.js" data-turbolinks-track="false"></script>
+<style type="text/css" media="screen">
+    .ace_editor {
+      position: relative !important;
+      margin: auto;
+      height: 100%;
+      width: 100%;
+    }
+    .scrollmargin {
+      height: 100px;
+      text-align: center;
+    }
+</style>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="wK7f3/2Pxz7a7LqIizTuZsrXFctG6pYB19cSGXtFhxDYPV50ymQD9kIE71lV4jhBlj3I5w3k8/ZW05wUeQof3A==">
+  
+<body style="background-color:#f5f3e6;height:100%;">
+  <div id="bumping" style="display: none;">
+  <div style="height:10%;">
+  </div>
+
+  <div class="row">
+    <pre class="for_showing" id="dummy_highlight" style="width: 60%; margin: 0px auto; background-color: rgb(255, 255, 255); z-index: 11; display: none;"></pre>
+  </div>
+
+  <div class="row">
+    <pre class="for_showing" id="show_c" style="width: 60%; margin: 0px auto; background-color: rgb(255, 255, 255); z-index: 11; display: none;"></pre>
+  </div>
+</div>
+
+
+    <div id="left_tool_form" style="float:left ; position:relative; width:100px; margin:10px; margin-left:10px;margin-right:10px;" role="form">
+<!-- to_ks: This button can be placed anywhere in this page, you can also move it to edit.html.erb -->
+<!-- I also recommned you moving your button out of the "form" tag -->
+<div class="alert alert-success" id="flash_msg" style="display:none"></div>
+
+<form class="new_work" id="new_work" action="https://chiduino.com/works/manage_save" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="wK7f3/2Pxz7a7LqIizTuZsrXFctG6pYB19cSGXtFhxDYPV50ymQD9kIE71lV4jhBlj3I5w3k8/ZW05wUeQof3A==">
+    <button class="btn btn-success btn-xs" id="save_work" style="margin:2px; width:70px; font-size:20px;">儲存</button>
+<p style="margin:0px;">檔名:</p>
+    <input type="hidden" name="work[id]" id="id_tag">
+    <input input_html="{:class=&gt;&quot;form-control&quot;, :style=&gt;&quot;margin:10px; width:70px; font-size:20px;&quot;}" type="text" value="新增的工作" name="work[title]" id="work_title" style="width: 70px;">
+
+
+
+    <div style="margin:10px;">
+    <nav class="navbar navbar-default" role="navigation" style="font-size:20px;">
+  <div class="container-fluid" style="height:30px; margin:0 ;border:0 ;padding:0;">
+  <div class="navbar-header" align="center">
+    <a class="navbar-brand" href="https://chiduino.com/">回檔案列表</a>
+
+<!-- <div> -->
+<!-- </div> -->
+  </div>
+
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+    <a href="https://chiduino.com/works/new#" class="dropdown-toggle" data-toggle="dropdown">
+    chiduino_2022-09-27_dzgs3hcihp
+    <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="https://chiduino.com/users/edit">帳號設定</a></li>
+      <li><a rel="nofollow" data-method="delete" href="https://chiduino.com/users/sign_out">登出</a></li>
+      <li><a href="http://www.chiduino.com/download.html">使用教學</a></li>
+      </ul>
+      </li>
+  </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    </div>
+
+    <button style="margin:2px; width:70px ; font-size:20px;" type="button" onclick="pre_chCompile_selectAll()" class="btn btn-success btn-xs">編譯</button>
+    <button style="margin:2px; width:70px ; font-size:20px;" type="button" onclick="pre_chCompile_selectAll_offline()" class="btn btn-success btn-xs">離編</button>
+    <button style="margin:2px; width:70px ; font-size:20px;" type="button" onclick="ctrl_d()" class="btn btn-success btn-xs">對齊</button>
+    <button style="margin:2px; width:70px ; font-size:20px;" type="button" onclick="select_color_codes()" class="btn btn-success btn-xs">彩字</button>
+
+    <!--button style="margin:2px; width:70px ; font-size:20px;" type="button" onclick="toggle_edit_mode()" class="btn btn-success btn-xs" >切換</button-->
+
+    <div>文字大小</div>
+    <button style="margin:0px; width:30px ; font-size:20px;" type="button" onclick="font_size_change(1)" class="btn btn-success btn-xs">+</button>
+    <button style="margin:0px; width:30px ; font-size:20px;" type="button" onclick="font_size_change(-1)" class="btn btn-success btn-xs">-</button>
+
+    <div>工具列大小</div>
+    <button style="margin:0px; width:30px ; font-size:20px;" type="button" onclick="tool_size_change(1)" class="btn btn-success btn-xs">+</button>
+    <button style="margin:0px; width:30px ; font-size:20px;" type="button" onclick="tool_size_change(-1)" class="btn btn-success btn-xs">-</button>
+
+  <div class="alert alert-success alert-dismissable"><button class="close" data-dismiss="alert" aria-hidden="true">×</button>註冊成功，歡迎！</div>
+
+    <textarea name="work[content]" id="work_content" style="display: none;" label="false">變數宣告綠色字在這裡
+
+
+
+腳位宣告藍色字在底下框裡
+{
+
+
+
+}
+
+
+以下工作要一直重複做
+{
+
+
+
+}
+
+
+</textarea>
+
+</form>
+<div>
+<p style="margin:0px;">範例編號:</p>
+<input type="text" name="search_examples" id="search_examples" style="width: 70px;">
+<button id="fire_search_examples" onclick="javascript:void(0);">取得</button>
+
+
+
+<!-- <button type="button" onclick="insert_example_1()"  style="margin:0px; font-size:10px;">使用快速範例1</button> -->
+<!-- <button type="button" onclick="insert_example_2()"  style="margin:0px; font-size:10px;">使用快速範例2</button> -->
+<!-- <button type="button" onclick="insert_example_3()"  style="margin:0px; font-size:10px;">使用快速範例3</button> -->
+<br>
+    <a href="http://www.chiduino.com/download.html" style="margin:0px; font-size:20px;">軟體安裝教學</a>
+<br>
+    <!-- <a href="http://localhost:3000/download.html" style="margin:0px;  font-size:8px;" >開發者用安裝教學</a> -->
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+    <iframe id="ide" src="simplest_compiler.html" align="center" style="width:80%;  display:block; padding:0px; margin: 10px; margin-top:20px; z-index:2 ; float:left !important;" width="1824" height="851"></iframe>
+
+
+    <iframe id="drag_ide" src="drag_test.html" align="center" scrolling="no" style="width:80%; height:800px; padding:0px; display:block; margin: 10px; margin-top:20px; z-index:2 ; float:left !important; display: none"></iframe>
+
+
+
+<div class="eng_code" style=" width:60%; height:10px; ">
+</div>
+
+<div id="edit_history" style="display: none;"></div>
+<div id="undo_index" style="display: none;"></div>
+
+
+<script>
+
+
+window.onbeforeunload = function() { return "如果你還沒有存檔 工作將遺失!"; };
+
+
+  // $("#drag_ide").hide()
+
+  $("#edit_history").hide()
+  $("#undo_index").hide()
+
+  $("#bumping").hide()
+  $("#show_c").hide()
+  $("#dummy_highlight").hide()
+  $("#work_content").hide()
+
+
+
+$("#work_title").css("width","70px")
+$("#search_examples").css("width","70px")
+
+$("#work_title").focusin(function(){$("#left_tool_form").css("z-index", "10");$("#work_title").css("width","200px")})
+$("#work_title").focusout(function(){$("#left_tool_form").css("z-index", "1");$("#work_title").css("width","70px")})
+
+
+/*
+function copy()
+{
+var ide = document.getElementById('ide');
+
+        if(ide){var innerDoc = ide.contentDocument || ide.contentWindow.document;c=innerDoc.getElementById("container").innerHTML ;}
+        else {c=document.getElementById("container").innerHTML}
+
+$("#work_content").val(c.replace(/<br>/g,"\n"));
+}
+*/
+
+
+
+function inverse_copy()
+{
+
+// highlight has a copy() function , which should wait until inverse_copy has completely processed
+
+var d = $.Deferred()
+
+$.when(finished_loading(d)).done(function(){highlight();})  // this must de comment if wish to highlight at first?
+
+
+}
+
+
+function finished_loading(d){
+
+        document.getElementById("ide").contentDocument.getElementById("container").innerHTML =  $("#work_content").val()
+
+        d.resolve(); // 改变Deferred对象的执行状态
+
+        return d
+      }
+
+
+
+
+//automatically load text content from textarea containing text from DB
+var myVar = setInterval(function () {load_ta()}, 200);
+
+function load_ta()
+          {
+
+            if(document.getElementById('ide').contentDocument.getElementById("container") || document.getElementById('ide').contentDocument.contentWindow)
+                {
+                    inverse_copy()
+                    clearInterval(myVar)
+                }
+          }
+
+</script>
+
+
+
+
+<script>
+//
+
+document.height = window.innerHeight;
+
+document.getElementById("ide").width = Math.round(window.innerWidth*0.95).toString();
+
+document.getElementById("ide").height = Math.round(window.innerHeight*0.9).toString();
+
+hide_both();
+
+var ide_mode = 1
+
+
+function toggle_edit_mode()
+{
+
+
+     var ide = document.getElementById('ide');
+   var innerDoc = ide.contentDocument || ide.contentWindow.document;
+
+    var drag_ide = document.getElementById('drag_ide');
+   var drag_innerDoc = drag_ide.contentDocument || drag_ide.contentWindow.document;
+
+
+var c
+
+  if(ide_mode==1)  // mode=1 , text ide mode
+  {
+
+
+
+
+
+    c = innerDoc.getElementById("highlight").innerHTML
+
+
+c = "<div class=\"none_sort\"><span class=\"main_loop_1\">變數宣告綠色字在這裡</span></div><div id=\"dcl_code\" class=\"s\">" + highlight_text2div_dcl(c) + "<div class=\"none_sort\"><span class=\"main_loop_2\">腳位宣告藍色字在底下框裡</span></div><div id=\"md_code\" class=\"s\">" + highlight_text2div_md(c) + "<div class=\"none_sort\"><span class=\"main_loop_3\">以下工作要一直重複做</span></div><div id=\"loop_code\" class=\"s\">" + highlight_text2div_loop(c)
+
+
+
+
+
+c = drag_ide_bracket_align_main(c)
+
+    $("#ide").hide()
+    $("#drag_ide").show()
+
+
+
+   drag_innerDoc.getElementById("code_container").innerHTML=c
+
+
+
+
+    ide_mode=2
+
+  //
+
+    }
+
+    else
+    {
+
+      c = drag_innerDoc.getElementById("code_container").innerHTML
+
+      c = get_plain_code(c)
+
+      c = bracket_align_main(c)
+
+
+
+      $("#ide").show()
+      $("#drag_ide").hide()
+
+      innerDoc.getElementById("container").innerHTML = c
+
+      ide_mode = 1
+
+      highlight()
+
+
+    }
+
+
+}
+
+
+function sendback_text_to_ide()
+{
+  toggle_edit_mode()
+
+    $("#ide").hide()
+    $("#drag_ide").show()
+
+    ide_mode=2
+
+}
+
+
+$(".save_button").mouseenter(function(){
+
+if(ide_mode == 2)
+{
+    sendback_text_to_ide()
+}
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+function select_color_codes()
+{
+
+      if(ide_mode==2)
+            {
+
+
+                  var ide = document.getElementById('ide');
+               var innerDoc = ide.contentDocument || ide.contentWindow.document;
+
+                var drag_ide = document.getElementById('drag_ide');
+               var drag_innerDoc = drag_ide.contentDocument || drag_ide.contentWindow.document;
+
+
+            var c
+
+            c = drag_innerDoc.getElementById("code_container").innerHTML
+
+                  c = get_plain_code(c)
+
+                  innerDoc.getElementById("container").innerHTML = c
+
+
+
+            $("#bumping").show()
+              $("#show_c").hide()
+              $("#dummy_highlight").show()
+
+
+             document.getElementById("dummy_highlight").innerHTML = highlight(c)
+
+                SelectText("dummy_highlight")
+
+
+            $("#ide").hide()
+                  $("#drag_ide").show()
+
+            }
+      else
+            {
+
+
+            $("#bumping").show()
+              $("#show_c").hide()
+              $("#dummy_highlight").show()
+
+               var ide = document.getElementById('ide');
+               var innerDoc = ide.contentDocument || ide.contentWindow.document;
+
+             document.getElementById("dummy_highlight").innerHTML = innerDoc.getElementById("highlight").innerHTML
+
+                SelectText("dummy_highlight")
+
+            }
+
+
+}
+
+function pre_chCompile()
+{
+
+  if(ide_mode==2)
+{
+  sendback_text_to_ide()
+}
+
+
+
+$("#bumping").show()
+  $("#show_c").show()
+  $("#dummy_highlight").hide()
+
+  chCompile()
+}
+
+function pre_chCompile_selectAll()
+{
+
+if(ide_mode==2)
+{
+  sendback_text_to_ide()
+}
+
+
+$("#bumping").show()
+  $("#show_c").show()
+  $("#dummy_highlight").hide()
+
+  chCompile_selectAll()
+
+}
+
+
+
+function pre_chCompile_selectAll_offline()
+{
+
+if(ide_mode==2)
+{
+  sendback_text_to_ide()
+}
+
+
+$("#bumping").show()
+  $("#show_c").show()
+  $("#dummy_highlight").hide()
+
+  chCompile_local()
+
+}
+
+
+
+function hide_both()
+{
+
+  $("#bumping").hide()
+  $("#show_c").hide()
+  $("#dummy_highlight").hide()
+
+}
+
+
+
+
+/*
+     if($("#dummy_highlight").css("overflow")=="hidden")
+        {
+            $("#dummy_highlight").css({"overflow":"visible"})
+            SelectText("dummy_highlight");
+        }
+
+    else
+        {
+            $("#dummy_highlight").css({"overflow":"hidden"})
+        }
+*/
+
+</script>
+
+
+
+
+<script>
+$(document).ready(function(){
+  var textarea = $("#work_content");
+
+  $("#toggletextarea-btn").on('click', function () {
+    textarea.toggle();
+  });
+
+  $(".dropdown-menu").on('click','li',function(){
+    editor.insert($(this).text());
+  });
+
+  $(document).bind('keydown', function(e) {   // ctrl + s pushed only catched by keydown
+    if(e.ctrlKey && (e.which == 83)) {
+      e.preventDefault();
+
+      if(ide_mode==1){
+        $("#save_work").trigger("click");
+      }
+
+      if(ide_mode==2){
+        sendback_text_to_ide()
+        $("#save_work").trigger("click");
+      }
+      return false;
+    }
+  });
+
+  $("#search_examples").on('keyup', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.keyCode===13){
+      search_example();
+    } else {
+      return false
+    }
+  })
+
+  $( "#fire_search_examples" ).on("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    search_example();
+  })
+})
+
+search_example = function(){
+
+  var term = $("#search_examples").val();
+  $.get( "/works/api/search_examples" + "?term=" + term, function( data ) {
+
+    document.getElementById("ide").contentDocument.getElementById("container").innerHTML = data.content;
+    highlight();
+
+    console.log(data.content);
+    console.log("Content fetched");
+  })
+}
+
+</script>
+
+
+
+<script>
+
+//click aside to return to edit mode
+$('.for_showing').on('click', function (ev) {
+    ev.stopPropagation();
+});
+
+document.getElementById("bumping").onclick=function(){$(this).hide();};
+
+</script>
+
+
+<script>
+
+</script>
+
+
+
+
+</body></html>
