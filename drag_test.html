@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://chiduino.com/drag_test -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Chiduino - 才讀立懂</title>
+  
+  <link rel="stylesheet" media="all" href="chiduino-0927.css" data-turbolinks-track="false">
+  <script src="application-0927.js" data-turbolinks-track="false"></script>
+  <script src="chiduino-0927.js" data-turbolinks-track="false"></script>
+<style type="text/css" media="screen">
+    .ace_editor {
+      position: relative !important;
+      margin: auto;
+      height: 100%;
+      width: 100%;
+    }
+    .scrollmargin {
+      height: 100px;
+      text-align: center;
+    }
+</style>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="0QS8phEGY3YgxB5Q6w83C4jnNE1RMPBQVRS66uWBiCbJlz0NJu2nvrgsS4E12eEs1A3pYRo+lafUEDTn584Q6g==">
+  
+<body style="background-color:#FFFFFF;">
+  
+<div id="whole_drag_doc">
+
+
+<div id="left_largest_toolbox">
+
+
+
+<div id="default_tool" class="drag_only tool s ui-sortable">
+  <div class="line ui-sortable-handle ui-sortable">
+    <div class="incode var ui-sortable-handle"><span>任意文字</span></div>
+    <div class="incode ui-sortable-handle"><span>&nbsp;&nbsp;&nbsp;</span></div>
+    <div class="incode ui-sortable-handle"><span class="curve_bracket">{</span></div>
+    <div class="incode ui-sortable-handle"><span class="curve_bracket">}</span></div>
+    <div class="incode ui-sortable-handle"><span>(</span></div>
+    <div class="incode ui-sortable-handle"><span>)</span></div>
+  </div>
+  <div class="line ui-sortable-handle ui-sortable">
+    <div class="incode ui-sortable-handle"><span>&nbsp;&nbsp;&nbsp;</span></div>
+  </div>
+</div>
+
+
+
+
+<div id="toolbox" style="display: none;">
+    <div id="basic_button" class="difficulty" style="background-color: rgb(220, 80, 80);">基本
+
+      <div class="topics">
+
+        <div id="default_click" class="toolbar_container" style="display: none; background-color: rgb(80, 220, 80);">宣布<div class="toolbar">
+            ...是整數,且值為...
+            ...是正整數,且值為...
+            ...是大整數,且值為...
+            ...是正的大整數,且值為...
+            ...是有小數的,且值為...
+            ...是有精密小數的,且值為...
+            ...是對或錯,且值為...
+        </div></div>
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">數學<div class="toolbar">
+            把...的值變成...
+
+            加上
+            減掉
+            乘以
+            除以
+
+            ()除以()的餘數
+
+        一個()以上()以下的隨機數字
+        選定一個沒有接東西的電壓讀取腳A()使之後的隨機數字更隨機
+
+        把...增加...
+        把...減少...
+        把...變成原來的...倍
+        把...變成原來的...分之一倍
+
+        轉換成整數後的( )
+        轉換成正整數後的( )
+        轉換成大整數後的( )
+        轉換成正的大整數後的( )
+        轉換成有小數後的( )
+        轉換成有精密小數後的( )
+        </div></div>
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">迴圈<div class="toolbar">
+              執行下框()次
+              {
+
+              }
+
+              一開始( ),而如果( )就執行下框,完畢後做( ),重複直到條件不符
+              {
+
+              }
+
+
+             如果此刻( ),就執行下框
+             {
+
+             }
+             條件不合就執行下框
+             {
+
+             }
+
+
+             當( )時不斷執行下框
+             {
+
+             }
+             停止所有程式運作
+             跳出此迴圈
+
+             下框內為名稱為( )的執行內容
+             {
+
+             }
+        </div></div>
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">條件<div class="toolbar">
+            剛好是
+            對的
+            錯的
+
+            大於
+            小於
+            大於等於
+            小於等於
+            不等於
+
+            而且
+            或者
+            不是
+        </div></div>
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">狀態<div class="toolbar">
+            ( )是有電或沒電的讀入腳
+            ( )目前的狀態
+            A( )目前的電壓值
+
+            有電
+            沒電
+
+        名為()的是接在()和GND的按鈕
+        ()被按下了
+        ()沒被按下
+        </div></div>
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">輸出<div class="toolbar">
+            ( )是有電或沒電的輸出腳
+            把( )變成有電
+            把( )變成沒電
+
+            使( )開始輸出比例為(0~255)的調寬波
+            使( )開始輸出每秒(整數)次的方波
+            使( )停止輸出方波
+
+          使接在9和10的喇叭開始輸出每秒()次,音量為(0~10),持續()毫秒且在背景運作的方波
+        使接在9和10的喇叭開始輸出每秒()次,音量為(0~10),持續()毫秒的方波
+
+            從( )播放速度每分鐘( )拍,曲名為( ),音高修正倍數為( )倍且內容為( )的自訂樂曲
+        </div></div>
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">時間<div class="toolbar">
+            開機到目前的毫秒數
+            開機到目前的微秒數
+
+            等待( )毫秒
+            等待( )微秒
+
+            下框於開機後()毫秒後執行第一次,之後每()毫秒執行一次,總共要做(無限)次<br>{<br>}
+
+        ...是個獨立運作的倒數計時器,且一開始時是已經倒數完的狀態
+        ...倒數完了
+        ...開始倒數()毫秒
+
+        </div></div>
+
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">註解和連接<div class="toolbar">
+            註解
+
+            註解開始
+            註解結束
+            連接下行
+        </div></div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="adv_button" class="difficulty" style="background-color: rgb(220, 220, 220);">進階
+
+<div class="topics">
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">資訊輸出<div class="toolbar">
+    啟動USB以及TXRX的對外通訊,頻率為(9600)
+
+    送出(hello world)文字
+    以文字格式送出( )的數值
+    以十六進位文字格式送出( )的數值
+    送出(hello world)文字且換行
+    以文字格式送出( )的數值且換行
+    以十六進位文字格式送出( )的數值且換行
+
+    結束USB以及TXRX的對外通訊
+</div></div>
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">電容開關<div class="toolbar">
+名稱為()是從()送訊號從()接收訊號的電容值測量器
+連續讀取()次電容值後取總和
+連續讀取()且次排除背景值後的電容取總和
+
+設定為過了()毫秒後還沒測到電容值就放棄
+使()重新確定背景電容值
+設定為過了()毫秒後才再次確定背景電容值
+</div></div>
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">文字液晶<div class="toolbar">
+
+     (主顯示器)是位址為(0x27)款式(A)的文字液晶
+     (主顯示器)是位址為(0x20)款式(B)的文字液晶
+     ( )接於液晶RS,( )接於液晶E,( )( )( )( )分別接於液晶D4,D5,D6,D7的是名為(主顯示器)的文字液晶
+
+     (主顯示器)是寬( )字高( )字的文字液晶
+
+     使(主顯示器)顯示空白畫面
+     使(主顯示器)顯示( )的數值
+     使(主顯示器)顯示( )文字
+
+    把()的打印位置移動到第()行第()字處
+
+     以底線顯示(主顯示器)的打印位置
+     以方塊顯示(主顯示器)的打印位置
+     取消顯示(主顯示器)的打印位置
+
+     暫時隱藏(主顯示器)的資訊
+    重新顯示(主顯示器)的資訊
+</div></div>
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">步進<div class="toolbar">
+
+    ( )和( )接的是名稱為( )的步進馬達
+    ( ),( ),( )和( )接的是名稱為( )的步進馬達
+
+    ()的最高速度設為每秒()步且加速度為()步每秒平方
+    以加速方式旋轉()步
+
+    ...是個步進馬達群組
+    名為()的步進馬達群組包括名為()()的兩個馬達
+    步進馬達群組()的第一和第二個馬達同時各旋轉()和()步
+
+    名為()的步進馬達群組包括名為()()()的三個馬達
+    步進馬達群組()的第一~三個馬達同時各旋轉(),()和()步
+
+    名為()的步進馬達群組包括名為()()()()的四個馬達
+    步進馬達群組()的第一~四個馬達同時各旋轉(),(),()和()步
+</div></div>
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">直流馬達<div class="toolbar">
+
+    接在()()名為()的是一個直流馬達
+    ()是左輪接在()(),右輪接在()()的二輪車底盤
+
+ 開始前進
+  開始後退
+   煞車停止
+
+      開始原地右轉
+       開始原地左轉
+
+
+       左輪開始向前
+        右輪開始向前
+
+
+        左輪開始向後
+         右輪開始向後
+
+</div></div>
+
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">伺服<div class="toolbar">
+
+    名稱為( )的是顆伺服馬達
+    名稱為( )的伺服馬達連接在( )且脈衝訊號範圍為(800)到(2400)微秒
+
+    把( )轉到( )度的位置
+
+</div></div>
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">溫濕度<div class="toolbar">
+
+    (名稱)是溫度濕度感測器
+    令(名稱)從(整數)讀取溫度和濕度
+
+    (名稱)讀取到的溫度
+    (名稱)讀取到的濕度
+</div></div>
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">超音波<div class="toolbar">
+
+    ()是從()發聲從()接收且測量()公分內距離的超音波測距器
+
+    ()此時測到的公分距離
+    ()此時測到的毫米距離
+    ()快速測()次毫米距離後的中間值
+</div></div>
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">懸浮微粒<div class="toolbar">
+
+     名稱為()從()接收()傳送的是型號為G3的懸浮微粒偵測器
+   ()執行偵測,讀入資料
+   ()目前每立方米PM1.0微克數
+   ()目前每立方米PM2.5微克數
+   ()目前每立方米PM10微克數
+
+</div></div>
+
+
+
+
+
+
+
+
+</div>
+
+
+    </div>
+
+
+
+
+    <div id="more_adv_button" class="difficulty" style="background-color: rgb(220, 220, 220);">高階
+
+<div class="topics">
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">資訊接收<div class="toolbar">
+    啟動對外通訊,頻率為(9600)
+
+
+
+    任何讀取若超過千分之( )秒還沒找到就不找了
+    月台裡有資料了
+    月台裡的資訊格數
+    開始出月台抓取出一個有小數的數(取出後馬上停止出月台)
+    開始出月台抓取出第一個整數,以大整數存(取出後馬上停止出月台)
+    開始出月台忽略文字( )後抓到的第一個整數,以大整數存(取出後馬上停止出月台)
+    目前月台上的第一個字,該字此時會離開月台
+    目前月台上的第一個字,該字此時不會離開月台
+    目前月台上所有的字
+    目前月台上直到文字( )之前所有的字
+    月台裡有文字( )
+    月台裡有文字( )在文字( )之前
+
+    結束對外通訊
+</div></div>
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">紅外遙控<div class="toolbar">
+    ( )是紅外光遙控接收器
+    啟動接收紅外光訊號功能
+    有收到紅外光訊號
+
+    收到的紅外光訊號種類
+    收到的紅外光訊號值
+    收到的紅外光訊號長度
+    傳出收到的紅外光訊號資訊總覽
+
+    準備再次接收紅外光訊號
+
+    啟動輸出紅外光訊號功能
+    從3送出種類為( )十進位值為( )的( )位元紅外光訊號
+    從3送出種類為( )十六進位值為( )的( )位元紅外光訊號
+</div></div>
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">藍牙<div class="toolbar">
+
+    名為()的藍牙模組的RXD腳接於()且TXD腳接於()
+    名為()且資料高低相反的藍牙模組的RXD腳接於()且TXD腳接於()
+
+    啟動名為()的HC-05藍牙模組
+    啟動名為()的HC-06藍牙模組
+    以包率()啟動名為()的藍牙模組
+
+    輪到()預備接收，並丟棄其他通訊處之前接收到的資料
+    是輪到()接收的話
+    ()有新資料漏接(月台擠超過64格)的話
+
+    從()以文字格式送出()的數值
+    從()以文字格式送出()的數值並換行
+    從()送出()文字
+    從()送出()文字並換行
+
+    目前()的月台上的第一個字,該字此時會離開月台
+    目前()的月台上的第一個字,該字此時不會離開月台
+</div></div>
+
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">Blynk<div class="toolbar">
+
+從名稱為()密碼為()的WIFI連線到授權碼為()的Blynk專案
+連上後取得所有參數
+
+和Blynk應用程式交換資訊
+
+從2和3腳啟動Blynk監視功能
+</div></div>
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">收值<div class="toolbar">
+Blynk應用程式更動V...腳後執行下框
+    {
+    }
+
+
+視為整數的該腳值
+視為有小數的該腳值
+視為有精密小數的該腳值
+視為文字的該腳值
+
+視為整數的該腳第()個值
+視為有小數的該腳第()個值
+視為有精密小數的該腳第()個值
+視為文字的該腳第()個值
+
+</div></div>
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">傳值<div class="toolbar">
+下框上傳資料到Blynk的V...腳
+    {
+    }
+
+把()的值傳到Blynk的V...腳上
+
+
+()是Blynk上的LCD且虛擬腳是V...
+使名為()的Blynk液晶從第()行第()個字開始顯示()文字
+使名為()的Blynk液晶從第()行第()個字開始顯示()的值
+使()顯示空白畫面
+
+
+...是一個接在V...腳上的通訊視窗
+從()以文字格式送出()的值到Blynk上
+從()以文字格式送出()的值到Blynk上並換行
+等待()送完資料才繼續
+
+使Blynk跳出通知文字()
+
+
+
+寄標題為文字()內容為文字()的email到()
+寄標題為()資訊內容為()資訊的email到()
+</div></div>
+
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">橋接<div class="toolbar">
+...是另一台連上Blynk的機器,由此app內的V...腳遙控
+機器()的授權碼是()
+
+把()的第()腳變成有電
+把()的第()腳變成沒電
+
+
+傳送()的數值到()的A()腳
+傳送()的數值到()的V()腳
+傳送文字()到()的V()腳
+</div></div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div id="difficulty_box">
+    <div id="basic_button" class="difficulty" style="background-color: rgb(220, 220, 220);">基本
+
+      <div class="topics">
+
+        <div id="default_click" class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">宣布<div class="toolbar">
+            ...是整數,且值為...
+            ...是正整數,且值為...
+            ...是大整數,且值為...
+            ...是正的大整數,且值為...
+            ...是有小數的,且值為...
+            ...是有精密小數的,且值為...
+            ...是對或錯,且值為...
+        </div></div>
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">數學<div class="toolbar">
+            把...的值變成...
+
+            加上
+            減掉
+            乘以
+            除以
+
+            ()除以()的餘數
+
+        一個()以上()以下的隨機數字
+        選定一個沒有接東西的電壓讀取腳A()使之後的隨機數字更隨機
+
+        把...增加...
+        把...減少...
+        把...變成原來的...倍
+        把...變成原來的...分之一倍
+
+        轉換成整數後的( )
+        轉換成正整數後的( )
+        轉換成大整數後的( )
+        轉換成正的大整數後的( )
+        轉換成有小數後的( )
+        轉換成有精密小數後的( )
+        </div></div>
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">迴圈<div class="toolbar">
+              執行下框()次
+              {
+
+              }
+
+              一開始( ),而如果( )就執行下框,完畢後做( ),重複直到條件不符
+              {
+
+              }
+
+
+             如果此刻( ),就執行下框
+             {
+
+             }
+             條件不合就執行下框
+             {
+
+             }
+
+
+             當( )時不斷執行下框
+             {
+
+             }
+             停止所有程式運作
+             跳出此迴圈
+
+             下框內為名稱為( )的執行內容
+             {
+
+             }
+        </div></div>
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">條件<div class="toolbar">
+            剛好是
+            對的
+            錯的
+
+            大於
+            小於
+            大於等於
+            小於等於
+            不等於
+
+            而且
+            或者
+            不是
+        </div></div>
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">狀態<div class="toolbar">
+            ( )是有電或沒電的讀入腳
+            ( )目前的狀態
+            A( )目前的電壓值
+
+            有電
+            沒電
+
+        名為()的是接在()和GND的按鈕
+        ()被按下了
+        ()沒被按下
+        </div></div>
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">輸出<div class="toolbar">
+            ( )是有電或沒電的輸出腳
+            把( )變成有電
+            把( )變成沒電
+
+            使( )開始輸出比例為(0~255)的調寬波
+            使( )開始輸出每秒(整數)次的方波
+            使( )停止輸出方波
+
+          使接在9和10的喇叭開始輸出每秒()次,音量為(0~10),持續()毫秒且在背景運作的方波
+        使接在9和10的喇叭開始輸出每秒()次,音量為(0~10),持續()毫秒的方波
+
+            從( )播放速度每分鐘( )拍,曲名為( ),音高修正倍數為( )倍且內容為( )的自訂樂曲
+        </div></div>
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">時間<div class="toolbar">
+            開機到目前的毫秒數
+            開機到目前的微秒數
+
+            等待( )毫秒
+            等待( )微秒
+
+            下框於開機後()毫秒後執行第一次,之後每()毫秒執行一次,總共要做(無限)次<br>{<br>}
+
+        ...是個獨立運作的倒數計時器,且一開始時是已經倒數完的狀態
+        ...倒數完了
+        ...開始倒數()毫秒
+
+        </div></div>
+
+
+        <div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">註解和連接<div class="toolbar">
+            註解
+
+            註解開始
+            註解結束
+            連接下行
+        </div></div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="adv_button" class="difficulty" style="background-color: rgb(220, 220, 220);">進階
+
+<div class="topics">
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">資訊輸出<div class="toolbar">
+    啟動USB以及TXRX的對外通訊,頻率為(9600)
+
+    送出(hello world)文字
+    以文字格式送出( )的數值
+    以十六進位文字格式送出( )的數值
+    送出(hello world)文字且換行
+    以文字格式送出( )的數值且換行
+    以十六進位文字格式送出( )的數值且換行
+
+    結束USB以及TXRX的對外通訊
+</div></div>
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">電容開關<div class="toolbar">
+名稱為()是從()送訊號從()接收訊號的電容值測量器
+連續讀取()次電容值後取總和
+連續讀取()且次排除背景值後的電容取總和
+
+設定為過了()毫秒後還沒測到電容值就放棄
+使()重新確定背景電容值
+設定為過了()毫秒後才再次確定背景電容值
+</div></div>
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">文字液晶<div class="toolbar">
+
+     (主顯示器)是位址為(0x27)款式(A)的文字液晶
+     (主顯示器)是位址為(0x20)款式(B)的文字液晶
+     ( )接於液晶RS,( )接於液晶E,( )( )( )( )分別接於液晶D4,D5,D6,D7的是名為(主顯示器)的文字液晶
+
+     (主顯示器)是寬( )字高( )字的文字液晶
+
+     使(主顯示器)顯示空白畫面
+     使(主顯示器)顯示( )的數值
+     使(主顯示器)顯示( )文字
+
+    把()的打印位置移動到第()行第()字處
+
+     以底線顯示(主顯示器)的打印位置
+     以方塊顯示(主顯示器)的打印位置
+     取消顯示(主顯示器)的打印位置
+
+     暫時隱藏(主顯示器)的資訊
+    重新顯示(主顯示器)的資訊
+</div></div>
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">步進<div class="toolbar">
+
+    ( )和( )接的是名稱為( )的步進馬達
+    ( ),( ),( )和( )接的是名稱為( )的步進馬達
+
+    ()的最高速度設為每秒()步且加速度為()步每秒平方
+    以加速方式旋轉()步
+
+    ...是個步進馬達群組
+    名為()的步進馬達群組包括名為()()的兩個馬達
+    步進馬達群組()的第一和第二個馬達同時各旋轉()和()步
+
+    名為()的步進馬達群組包括名為()()()的三個馬達
+    步進馬達群組()的第一~三個馬達同時各旋轉(),()和()步
+
+    名為()的步進馬達群組包括名為()()()()的四個馬達
+    步進馬達群組()的第一~四個馬達同時各旋轉(),(),()和()步
+</div></div>
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">直流馬達<div class="toolbar">
+
+    接在()()名為()的是一個直流馬達
+    ()是左輪接在()(),右輪接在()()的二輪車底盤
+
+ 開始前進
+  開始後退
+   煞車停止
+
+      開始原地右轉
+       開始原地左轉
+
+
+       左輪開始向前
+        右輪開始向前
+
+
+        左輪開始向後
+         右輪開始向後
+
+</div></div>
+
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">伺服<div class="toolbar">
+
+    名稱為( )的是顆伺服馬達
+    名稱為( )的伺服馬達連接在( )且脈衝訊號範圍為(800)到(2400)微秒
+
+    把( )轉到( )度的位置
+
+</div></div>
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">溫濕度<div class="toolbar">
+
+    (名稱)是溫度濕度感測器
+    令(名稱)從(整數)讀取溫度和濕度
+
+    (名稱)讀取到的溫度
+    (名稱)讀取到的濕度
+</div></div>
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">超音波<div class="toolbar">
+
+    ()是從()發聲從()接收且測量()公分內距離的超音波測距器
+
+    ()此時測到的公分距離
+    ()此時測到的毫米距離
+    ()快速測()次毫米距離後的中間值
+</div></div>
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">懸浮微粒<div class="toolbar">
+
+     名稱為()從()接收()傳送的是型號為G3的懸浮微粒偵測器
+   ()執行偵測,讀入資料
+   ()目前每立方米PM1.0微克數
+   ()目前每立方米PM2.5微克數
+   ()目前每立方米PM10微克數
+
+</div></div>
+
+
+
+
+
+
+
+
+</div>
+
+
+    </div>
+
+
+
+
+    <div id="more_adv_button" class="difficulty" style="background-color: rgb(220, 220, 220);">高階
+
+<div class="topics">
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">資訊接收<div class="toolbar">
+    啟動對外通訊,頻率為(9600)
+
+
+
+    任何讀取若超過千分之( )秒還沒找到就不找了
+    月台裡有資料了
+    月台裡的資訊格數
+    開始出月台抓取出一個有小數的數(取出後馬上停止出月台)
+    開始出月台抓取出第一個整數,以大整數存(取出後馬上停止出月台)
+    開始出月台忽略文字( )後抓到的第一個整數,以大整數存(取出後馬上停止出月台)
+    目前月台上的第一個字,該字此時會離開月台
+    目前月台上的第一個字,該字此時不會離開月台
+    目前月台上所有的字
+    目前月台上直到文字( )之前所有的字
+    月台裡有文字( )
+    月台裡有文字( )在文字( )之前
+
+    結束對外通訊
+</div></div>
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">紅外遙控<div class="toolbar">
+    ( )是紅外光遙控接收器
+    啟動接收紅外光訊號功能
+    有收到紅外光訊號
+
+    收到的紅外光訊號種類
+    收到的紅外光訊號值
+    收到的紅外光訊號長度
+    傳出收到的紅外光訊號資訊總覽
+
+    準備再次接收紅外光訊號
+
+    啟動輸出紅外光訊號功能
+    從3送出種類為( )十進位值為( )的( )位元紅外光訊號
+    從3送出種類為( )十六進位值為( )的( )位元紅外光訊號
+</div></div>
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">藍牙<div class="toolbar">
+
+    名為()的藍牙模組的RXD腳接於()且TXD腳接於()
+    名為()且資料高低相反的藍牙模組的RXD腳接於()且TXD腳接於()
+
+    啟動名為()的HC-05藍牙模組
+    啟動名為()的HC-06藍牙模組
+    以包率()啟動名為()的藍牙模組
+
+    輪到()預備接收，並丟棄其他通訊處之前接收到的資料
+    是輪到()接收的話
+    ()有新資料漏接(月台擠超過64格)的話
+
+    從()以文字格式送出()的數值
+    從()以文字格式送出()的數值並換行
+    從()送出()文字
+    從()送出()文字並換行
+
+    目前()的月台上的第一個字,該字此時會離開月台
+    目前()的月台上的第一個字,該字此時不會離開月台
+</div></div>
+
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">Blynk<div class="toolbar">
+
+從名稱為()密碼為()的WIFI連線到授權碼為()的Blynk專案
+連上後取得所有參數
+
+和Blynk應用程式交換資訊
+
+從2和3腳啟動Blynk監視功能
+</div></div>
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">收值<div class="toolbar">
+Blynk應用程式更動V...腳後執行下框
+    {
+    }
+
+
+視為整數的該腳值
+視為有小數的該腳值
+視為有精密小數的該腳值
+視為文字的該腳值
+
+視為整數的該腳第()個值
+視為有小數的該腳第()個值
+視為有精密小數的該腳第()個值
+視為文字的該腳第()個值
+
+</div></div>
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">傳值<div class="toolbar">
+下框上傳資料到Blynk的V...腳
+    {
+    }
+
+把()的值傳到Blynk的V...腳上
+
+
+()是Blynk上的LCD且虛擬腳是V...
+使名為()的Blynk液晶從第()行第()個字開始顯示()文字
+使名為()的Blynk液晶從第()行第()個字開始顯示()的值
+使()顯示空白畫面
+
+
+...是一個接在V...腳上的通訊視窗
+從()以文字格式送出()的值到Blynk上
+從()以文字格式送出()的值到Blynk上並換行
+等待()送完資料才繼續
+
+使Blynk跳出通知文字()
+
+
+
+寄標題為文字()內容為文字()的email到()
+寄標題為()資訊內容為()資訊的email到()
+</div></div>
+
+
+
+<div class="toolbar_container" style="display: none; background-color: rgb(220, 255, 220);">橋接<div class="toolbar">
+...是另一台連上Blynk的機器,由此app內的V...腳遙控
+機器()的授權碼是()
+
+把()的第()腳變成有電
+把()的第()腳變成沒電
+
+
+傳送()的數值到()的A()腳
+傳送()的數值到()的V()腳
+傳送文字()到()的V()腳
+</div></div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div id="topic_box">
+
+        <div id="default_click" class="toolbar_container" style="background-color: rgb(220, 255, 220);">宣布<div class="toolbar" style="display: none;">
+            ...是整數,且值為...
+            ...是正整數,且值為...
+            ...是大整數,且值為...
+            ...是正的大整數,且值為...
+            ...是有小數的,且值為...
+            ...是有精密小數的,且值為...
+            ...是對或錯,且值為...
+        </div></div>
+
+        <div class="toolbar_container" style="background-color: rgb(220, 255, 220);">數學<div class="toolbar" style="display: none;">
+            把...的值變成...
+
+            加上
+            減掉
+            乘以
+            除以
+
+            ()除以()的餘數
+
+        一個()以上()以下的隨機數字
+        選定一個沒有接東西的電壓讀取腳A()使之後的隨機數字更隨機
+
+        把...增加...
+        把...減少...
+        把...變成原來的...倍
+        把...變成原來的...分之一倍
+
+        轉換成整數後的( )
+        轉換成正整數後的( )
+        轉換成大整數後的( )
+        轉換成正的大整數後的( )
+        轉換成有小數後的( )
+        轉換成有精密小數後的( )
+        </div></div>
+
+        <div class="toolbar_container" style="background-color: rgb(220, 255, 220);">迴圈<div class="toolbar" style="display: none;">
+              執行下框()次
+              {
+
+              }
+
+              一開始( ),而如果( )就執行下框,完畢後做( ),重複直到條件不符
+              {
+
+              }
+
+
+             如果此刻( ),就執行下框
+             {
+
+             }
+             條件不合就執行下框
+             {
+
+             }
+
+
+             當( )時不斷執行下框
+             {
+
+             }
+             停止所有程式運作
+             跳出此迴圈
+
+             下框內為名稱為( )的執行內容
+             {
+
+             }
+        </div></div>
+
+        <div class="toolbar_container" style="background-color: rgb(220, 255, 220);">條件<div class="toolbar" style="display: none;">
+            剛好是
+            對的
+            錯的
+
+            大於
+            小於
+            大於等於
+            小於等於
+            不等於
+
+            而且
+            或者
+            不是
+        </div></div>
+
+        <div class="toolbar_container" style="background-color: rgb(220, 255, 220);">狀態<div class="toolbar" style="display: none;">
+            ( )是有電或沒電的讀入腳
+            ( )目前的狀態
+            A( )目前的電壓值
+
+            有電
+            沒電
+
+        名為()的是接在()和GND的按鈕
+        ()被按下了
+        ()沒被按下
+        </div></div>
+
+        <div class="toolbar_container" style="background-color: rgb(220, 255, 220);">輸出<div class="toolbar" style="display: none;">
+            ( )是有電或沒電的輸出腳
+            把( )變成有電
+            把( )變成沒電
+
+            使( )開始輸出比例為(0~255)的調寬波
+            使( )開始輸出每秒(整數)次的方波
+            使( )停止輸出方波
+
+          使接在9和10的喇叭開始輸出每秒()次,音量為(0~10),持續()毫秒且在背景運作的方波
+        使接在9和10的喇叭開始輸出每秒()次,音量為(0~10),持續()毫秒的方波
+
+            從( )播放速度每分鐘( )拍,曲名為( ),音高修正倍數為( )倍且內容為( )的自訂樂曲
+        </div></div>
+
+        <div class="toolbar_container" style="background-color: rgb(220, 255, 220);">時間<div class="toolbar" style="display: none;">
+            開機到目前的毫秒數
+            開機到目前的微秒數
+
+            等待( )毫秒
+            等待( )微秒
+
+            下框於開機後()毫秒後執行第一次,之後每()毫秒執行一次,總共要做(無限)次<br>{<br>}
+
+        ...是個獨立運作的倒數計時器,且一開始時是已經倒數完的狀態
+        ...倒數完了
+        ...開始倒數()毫秒
+
+        </div></div>
+
+
+        <div class="toolbar_container" style="background-color: rgb(220, 255, 220);">註解和連接<div class="toolbar" style="display: none;">
+            註解
+
+            註解開始
+            註解結束
+            連接下行
+        </div></div>
+
+        </div>
+
+  <div id="toolbar" class="drag_only tool s ui-sortable"><div class="line ui-sortable-handle ui-sortable">
+<div class="incode var ui-sortable-handle"><span>            ...</span></div><div class="incode ui-sortable-handle"><span class="dcl">是整數,且值為</span></div><div class="incode var ui-sortable-handle"><span>...</span></div></div>
+<div class="line ui-sortable-handle ui-sortable"><div class="incode var ui-sortable-handle"><span>            ...</span></div><div class="incode ui-sortable-handle"><span class="dcl">是正整數,且值為</span></div><div class="incode var ui-sortable-handle"><span>...</span></div></div>
+<div class="line ui-sortable-handle ui-sortable"><div class="incode var ui-sortable-handle"><span>            ...</span></div><div class="incode ui-sortable-handle"><span class="dcl">是大整數,且值為</span></div><div class="incode var ui-sortable-handle"><span>...</span></div></div>
+<div class="line ui-sortable-handle ui-sortable"><div class="incode var ui-sortable-handle"><span>            ...</span></div><div class="incode ui-sortable-handle"><span class="dcl">是正的大整數,且值為</span></div><div class="incode var ui-sortable-handle"><span>...</span></div></div>
+<div class="line ui-sortable-handle ui-sortable"><div class="incode var ui-sortable-handle"><span>            ...</span></div><div class="incode ui-sortable-handle"><span class="dcl">是有小數的,且值為</span></div><div class="incode var ui-sortable-handle"><span>...</span></div></div>
+<div class="line ui-sortable-handle ui-sortable"><div class="incode var ui-sortable-handle"><span>            ...</span></div><div class="incode ui-sortable-handle"><span class="dcl">是有精密小數的,且值為</span></div><div class="incode var ui-sortable-handle"><span>...</span></div></div>
+<div class="line ui-sortable-handle ui-sortable"><div class="incode var ui-sortable-handle"><span>            ...</span></div><div class="incode ui-sortable-handle"><span class="dcl">是對或錯,且值為</span></div><div class="incode var ui-sortable-handle"><span>...</span></div></div>
+<div class="line ui-sortable-handle ui-sortable"><div class="incode var ui-sortable-handle"><span>        </span></div></div></div>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+
+// set sortable
+var removeIntent = false
+
+function set_sortable()
+{
+
+  $(function() {
+
+/*
+
+  $(".s").sortable({
+                connectWith: ".s"
+
+
+    $( "#toolbar" ).sortable({
+                connectWith: ".s" })
+
+    $( "#default_tool" ).sortable({
+                connectWith: ".s" })
+
+    $("#dcl_code").sortable({
+                connectWith: ".s" })
+    $("#md_code").sortable({
+                connectWith: ".s" })
+    $("#loop_code").sortable({
+                connectWith: ".s" })
+
+*/
+
+      $( "#toolbar" ).sortable({
+        connectWith: ".s" }).disableSelection()
+
+      $( "#default_tool" ).sortable({
+        connectWith: ".s" }).disableSelection()
+
+
+
+      $("#dcl_code").sortable({
+
+        connectWith: ".s" ,
+
+
+        over: function () {
+          removeIntent = false;
+        },
+
+        out: function () {
+          removeIntent = true;
+        },
+
+        beforeStop: function (event, ui) {
+          if(removeIntent == true){
+            ui.item.remove();
+          }
+        }
+
+      }).disableSelection()
+
+
+
+    $("#md_code").sortable({
+
+      connectWith: ".s" ,
+
+      over: function () {
+        removeIntent = false;
+      },
+
+      out: function () {
+        removeIntent = true;
+      },
+
+      beforeStop: function (event, ui) {
+        if(removeIntent == true){
+          ui.item.remove();
+        }
+      }
+
+    }).disableSelection()
+
+
+
+    $("#loop_code").sortable({
+
+      connectWith: ".s" ,
+
+
+      over: function () {
+        removeIntent = false;
+      },
+
+      out: function () {
+        removeIntent = true;
+      },
+
+      beforeStop: function (event, ui) {
+        if(removeIntent == true){
+          ui.item.remove();
+        }
+      }
+
+      }).disableSelection()
+
+    $( ".line" ).sortable({
+      connectWith: ".line"
+    }).disableSelection()
+
+  })
+
+}
+
+set_sortable()
+
+
+
+
+//restore drag_only tool bar
+var initial_default_tool = [];
+var initial_toolbar = [];
+
+
+function set_clone_initial()
+{
+
+  initial_default_tool = [];
+  initial_toolbar = [];
+
+  $('#default_tool').each(function(index, obj) {
+    initial_default_tool.push(obj.innerHTML);
+  });
+
+
+  $('#toolbar').each(function(index, obj) {
+    initial_toolbar.push(obj.innerHTML);
+  });
+
+}
+
+set_clone_initial()
+
+
+
+// toolbox selection function codes
+$("#difficulty_box").html($("#toolbox").html())
+$(".difficulty>.topics>.toolbar_container").hide()
+$("#toolbox").hide()
+
+
+$("body").on("click","#difficulty_box>.difficulty",function(){
+  $("#topic_box").html($(this).find(".topics").html())
+  $("#topic_box>.toolbar_container").show()
+  $("#topic_box>.toolbar_container>.toolbar").hide()
+
+  $(".difficulty").css("background-color","rgba(220,220,220,1)")
+  $(this).css("background-color","rgba(220,80,80,1)")
+
+})
+
+
+
+$("body").on("click","#topic_box>.toolbar_container",function(){
+  var c
+
+  c = $(this).find(".toolbar").html()
+  c = highlight_main(c)
+  c = h_line_seperation(c)
+  c = highlight_text2div_toolbar(c)
+
+  $("#toolbar").html(c)
+  $("#toolbar").show()
+
+  set_clone_initial()
+
+
+  $(".toolbar_container").css("background-color","rgba(220,255,220,1)")
+  $(this).css("background-color","rgba(80,220,80,1)")
+
+})
+
+
+
+toolbar_init()  //initialize the toolbar default selection
+
+
+function toolbar_init()
+{
+$("#topic_box").html($("#basic_button").find(".topics").html())
+  $("#topic_box>.toolbar_container").show()
+  $("#topic_box>.toolbar_container>.toolbar").hide()
+
+$(".difficulty").css("background-color","rgba(220,220,220,1)")
+$("#basic_button").css("background-color","rgba(220,80,80,1)")
+
+
+////////////////////
+
+var c
+
+  c = $("#default_click").find(".toolbar").html()
+
+  c = highlight_main(c)
+
+  c = h_line_seperation(c)
+
+  c = highlight_text2div_toolbar(c)
+
+
+  $("#toolbar").html(c)
+  $("#toolbar").show()
+
+  set_clone_initial()
+
+
+  $(".toolbar_container").css("background-color","rgba(220,255,220,1)")
+  $("#default_click").css("background-color","rgba(80,220,80,1)")
+
+  set_sortable()
+
+}
+
+
+
+</script>
+
+
+
+<div id="code_container">
+
+</div>
+
+
+<script type="text/javascript">
+//connect tool bar draggerble to line and whole_code
+/*
+        $( ".drag_only" ).draggable({
+        connectToSortable: ".line",
+        helper: "clone"
+    })//.disableSelection()
+
+        $( ".line_drag_only" ).draggable({
+        connectToSortable: ".whole_code",
+        helper: "clone"
+    })//.disableSelection()
+*/
+
+
+function hover_highlight()
+{
+// prevent line hover when incode hovering
+
+$(".line").on("mouseenter",".incode",function(e){
+  e.stopPropagation
+  $(this).css("border-color","rgba(255,0,0,1)")
+  $(".line").css("border-color","#FFFFFF")
+});
+
+$(".line").on("mouseleave",".incode",function(e){
+  e.stopPropagation
+  $(this).css("border-color","rgba(0,0,0,0)")
+  $(this).closest(".line").css("border-color","rgba(255,0,0,1)")
+});
+
+$("body").on("mouseenter",".line",function(e){
+  // e.stopPropagation
+  $(this).css("border-color","rgba(255,0,0,1)")
+});
+
+$("body").on("mouseleave",".line",function(e){
+  // e.stopPropagation
+  $(this).css("border-color","#FFFFFF")
+});
+
+}
+
+hover_highlight()
+
+
+// change var name
+$("body").on("click",".var",function(){
+  var var_name = prompt("enter var name ");
+  if(var_name){$(this).html("<span>" + var_name + "</span>");}
+});
+
+
+//prevent contextmenu popup when rightclicked
+$("body").on("contextmenu",".line , .incode",function(){
+  return false;
+});
+
+
+  //Restore default list after sort by use event sortupdate
+  $("body").on( "sortupdate",".s",function(){
+
+
+
+    $('#default_tool').each(function(index, obj) {
+      obj.innerHTML = initial_default_tool[index];
+    });
+
+    $('#toolbar').each(function(index, obj) {
+      obj.innerHTML = initial_toolbar[index];
+    });
+
+
+
+
+    set_sortable()
+
+    hover_highlight()
+
+
+})
+
+
+// initialize sortable and connection when switching from text_edit_mode
+$("#code_container").mouseenter(function(){
+  set_sortable()
+  hover_highlight()
+});
+
+
+// clone by right click
+$("body").on("mousedown","#dcl_code>.line , #dcl_code>.line>.incode ,#md_code>.line , #md_code>.line>.incode ,#loop_code>.line , #loop_code>.line>.incode",function(e){
+
+    e.preventDefault()
+
+    if( e.button == 2 )
+    {
+      e.stopPropagation()
+
+      var clone =$(this).clone()
+
+      if(clone.attr('class').match(/incode/)) {
+        clone.insertAfter($(this))
+        clone.parent().sortable({     connectWith: ".line"   })
+    } else {
+      clone.insertAfter($(this))
+      clone.sortable({     connectWith: ".s"   })
+    }
+  }
+
+});
+
+
+
+/*
+$(function() {
+
+
+    var isDragging = false;
+    $(".incode")
+    .mousedown(function() {
+
+        isDragging = false;
+    })
+    .mousemove(function() {
+
+        isDragging = true;
+     })
+    .mouseup(function() {
+
+        var wasDragging = isDragging;
+        isDragging = false;
+        if (!wasDragging) {
+
+
+        }
+    });
+
+    $(".line").sortable();
+
+})
+
+*/
+
+
+</script>
+
+</div>
+
+
+
+
+
+
+</body></html>

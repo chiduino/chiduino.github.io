@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://chiduino.com/simplest_compiler -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Chiduino - 才讀立懂</title>
+  
+  <link rel="stylesheet" media="all" href="chiduino-0927.css" data-turbolinks-track="false">
+  <script src="application-0927.js" data-turbolinks-track="false"></script>
+  <script src="chiduino-0927.js" data-turbolinks-track="false"></script>
+<style type="text/css" media="screen">
+    .ace_editor {
+      position: relative !important;
+      margin: auto;
+      height: 100%;
+      width: 100%;
+    }
+    .scrollmargin {
+      height: 100px;
+      text-align: center;
+    }
+</style>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Mj//6cc3s8f6Y4HiygxtRZ+yr3IdKP7giync5U/Mvd8qrH5C8Nx3D2KL1DMU2rtiw1hyXlYmmxcKLVLoTYMlEw==">
+  
+<body style="background-color:#FFFFFF;">
+  
+
+<div class="newcode">
+    <pre contenteditable="true" id="container" onmousedown="highlight()" style="width: 6000px;">變數宣告綠色字在這裡
+
+
+
+腳位宣告藍色字在底下框裡
+{
+
+
+
+}
+
+
+以下工作要一直重複做
+{
+
+
+
+}
+
+
+</pre>
+
+</div>
+
+<div class="highlight" id="h_frame"><pre id="highlight"><span></span><span class="main_loop_1">變數宣告綠色字在這裡</span><span>
+
+
+
+</span><span class="main_loop_2">腳位宣告藍色字在底下框裡</span><span>
+</span><span class="curve_bracket">{</span><span>
+
+
+
+</span><span class="curve_bracket">}</span><span>
+
+
+</span><span class="main_loop_3">以下工作要一直重複做</span><span>
+</span><span class="curve_bracket">{</span><span>
+
+
+
+</span><span class="curve_bracket">}</span><span>
+
+
+</span></pre> </div>
+
+<div id="align_indicate" style="display:none">0</div>
+
+<!-- div id="align_indicate_change_code" style="display:none">0</div -->
+
+
+
+
+
+<script>
+
+    $( document ).width(6000);
+    $("#container").width(6000);
+
+</script>
+
+
+
+
+
+
+<div class="bar" id="insert_bar" style="display: block;">
+<ul class="ufc status" id="basics">&nbsp;&nbsp;基本&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ul>
+
+<ul class="ufc">宣布
+    <li class="fc g">...是整數,且值為...</li>
+    <li class="fc g">...是正整數,且值為...</li>
+    <li class="fc g">...是大整數,且值為...</li>
+    <li class="fc g">...是正的大整數,且值為...</li>
+    <li class="fc g">...是有小數的,且值為...</li>
+    <li class="fc g">...是有精密小數的,且值為...</li>
+    <li class="fc g">...是對或錯,且值為...</li>    
+</ul>
+
+<ul class="ufc">數學
+    <li class="fc i">把...的值變成...</li>
+    <li class="fc w"> </li>
+    <li class="fc i">加上</li>
+    <li class="fc i">減掉</li>
+    <li class="fc i">乘以</li>
+    <li class="fc i">除以</li>
+    <li class="fc w"> </li>
+<li class="fc i">()除以()的餘數</li>
+    <li class="fc w"> </li>
+<li class="fc i">一個()以上()以下的隨機數字</li>
+<li class="fc b">選定一個沒有接東西的電壓讀取腳A()使之後的隨機數字更隨機</li>
+<li class="fc w"> </li>
+<li class="fc i">把...增加...</li>
+<li class="fc i">把...減少...</li>
+<li class="fc i">把...變成原來的...倍</li>
+<li class="fc i">把...變成原來的...分之一倍</li>
+<li class="fc w"></li>
+<li class="fc i">轉換成整數後的( )</li>
+<li class="fc i">轉換成正整數後的( )</li>
+<li class="fc i">轉換成大整數後的( )</li>
+<li class="fc i">轉換成正的大整數後的( )</li>
+<li class="fc i">轉換成有小數後的( )</li>
+<li class="fc i">轉換成有精密小數後的( )</li>
+<li class="fc w"> </li>
+<li class="fc g">有使用到更多的數學計算</li>
+</ul>
+
+<ul class="ufc">迴圈
+    <li class="fc i">執行下框()次<br>    {<br>   }</li>
+    <li class="fc i"></li>
+    <li class="fc i">一開始( ),而如果( )就執行下框,完畢後做( ),重複直到條件不符<br>    {<br>     }</li>
+    <li class="fc w"> </li>
+    <li class="fc i"> 如果此刻( ),就執行下框<br>    {<br>     }</li>
+    <li class="fc i"> &nbsp;&nbsp;&nbsp;&nbsp;條件不合就執行下框<br>    {<br>     }</li>
+    <li class="fc i"> &nbsp;&nbsp;&nbsp;&nbsp;條件不合但如果此時( )時,則執行下框<br>    {<br>    }</li>
+    <li class="fc i"> &nbsp;&nbsp;&nbsp;&nbsp;條件都不合就執行下框<br>    {<br>    }</li>
+    <li class="fc w"> </li>
+    <li class="fc i"> 當( )時不斷執行下框<br>    {<br>     }</li>
+    <li class="fc i"></li>
+    <li class="fc i">停止執行程式但保留背景程式</li>
+    <li class="fc i">跳出此迴圈</li>
+    <li class="fc w"></li>
+    <li class="fc i">下框內為名稱為( )的執行內容<br>    {<br>    }</li>
+</ul>
+
+<ul class="ufc">條件
+    <li class="fc i">剛好是</li>
+    <li class="fc i">對的</li>
+    <li class="fc i">錯的</li>
+    <li class="fc w"> </li>
+    <li class="fc i">大於</li>
+    <li class="fc i">小於</li>
+    <li class="fc i">大於等於</li>
+    <li class="fc i">小於等於</li>
+    <li class="fc i">不等於</li>
+    <li class="fc w"> </li>
+    <li class="fc i">而且</li>
+    <li class="fc i">或者</li>
+    <li class="fc i">不是</li>
+</ul>
+
+<ul class="ufc">感測電
+    <li class="fc b">( )是有電或沒電的讀入腳</li>
+    <li class="fc i">( )目前的狀態</li>
+    <li class="fc i">A( )目前的電壓值</li>
+    <li class="fc w"> </li>
+    <li class="fc i">有電</li>
+    <li class="fc i">沒電</li>
+    <li class="fc w"> </li>
+
+<li class="fc i">名為()的是接在()和GND且一開始是被按下的按鈕</li>
+<li class="fc i">名為()的是接在()和GND的按鈕</li>
+<li class="fc i">讀取()的狀態</li>
+<li class="fc i">()是按下的</li>
+<li class="fc i">())剛被按下</li>
+<li class="fc i">()仍是按下的</li>
+<li class="fc i">()是放開的</li>
+<li class="fc i">()剛被放開</li>
+<li class="fc i">()仍是放開的</li>
+</ul>
+
+<ul class="ufc">輸出電
+    <li class="fc b">( )是有電或沒電的輸出腳</li>
+    <li class="fc c">把( )變成有電</li>
+    <li class="fc c">把( )變成沒電</li>
+    <li class="fc w"> </li>
+    <li class="fc c">使( )開始輸出比例為(0~255)的調寬波</li>    
+ </ul>
+
+
+
+<ul class="ufc">時間
+    <li class="fc i">開機到目前的毫秒數</li>
+    <li class="fc i">開機到目前的微秒數</li>
+    <li class="fc w"> </li>
+    <li class="fc i">等待( )毫秒</li>
+    <li class="fc i">等待( )微秒</li>
+    <li class="fc w"> </li>
+    <li class="fc i">下框於開機後()毫秒後執行第一次,之後每()毫秒執行一次,總共要做(無限)次<br>{<br>}</li>
+    <li class="fc w"> </li>
+<li class="fc i">...是個獨立運作的倒數計時器,且一開始時是已經倒數完的狀態</li>
+<li class="fc i">...倒數完了</li>
+<li class="fc i">...開始倒數()毫秒</li>
+
+</ul>
+
+
+<ul class="ufc">註解和連接
+    <li class="fc i">註解</li>
+    <li class="fc w"> </li>
+    <li class="fc i">註解開始</li>
+    <li class="fc i">註解結束</li>
+    <li class="fc i">連接下行</li>
+    <li class="fc i"></li>
+    <li class="fc i">...的英文是...</li>
+</ul>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bar" id="mechs" display="none" style="display: none;">
+
+<ul class="ufc status" id="mechs">&nbsp;&nbsp;傳動&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ul>
+
+
+
+<ul class="ufc">聲音
+    <li class="fc c">使( )開始輸出每秒(整數)次的方波</li>
+    <li class="fc c">使( )停止輸出方波</li>
+    <li class="fc c">方波使用預設計時器</li> 
+    <li class="fc c">從( )播放速度每分鐘( )拍,曲名為( ),音高修正倍數為( )倍且內容為( )的自訂樂曲
+    </li><li class="fc w"> </li>
+    <li class="fc y">有使用接在9和10可調音量的喇叭</li>
+    <li class="fc i">使接在9和10的喇叭開始輸出每秒()次,音量為(0~10),持續()毫秒且在背景運作的方波</li>
+    <li class="fc i">使接在9和10的喇叭開始輸出每秒()次,音量為(0~10),持續()毫秒的方波</li>
+    <li class="fc w"> </li>    
+    
+</ul>
+
+
+<ul class="ufc">SD撥放
+<li class="fc g">接在第(10)腳的SD卡由第(9)腳撥放聲音檔</li>
+<li class="fc b">SD卡啟動偵錯功能</li>    
+<li class="fc c">撥放檔名為(test)的音檔</li>
+<li class="fc i">從第()秒撥放名為()的音檔</li>
+<li class="fc i">SD暫停撥放或繼續撥放</li>
+<li class="fc i">SD停止撥放</li>
+<li class="fc i">設定SD音量為(0~7)</li>
+<li class="fc i">SD正在撥放</li>
+<li class="fc i">SD自動重複撥放音檔</li>
+<li class="fc i">SD不重複撥放音檔</li>
+<li class="fc i">SD高音質高運算</li>
+<li class="fc i">SD低音質低運算</li>
+</ul>
+
+
+<ul class="ufc">文字液晶
+    <!-- <li class="fc y">有使用文字液晶螢幕</li>-->
+     <li class="fc i">(主顯示器)是位址為(0x27)款式(A)的文字液晶</li>
+     <li class="fc i">(主顯示器)是位址為(0x20)款式(B)的文字液晶</li>
+     <li class="fc g">( )接於液晶RS,( )接於液晶E,( )( )( )( )分別接於液晶D4,D5,D6,D7的是名為(主顯示器)的文字液晶</li>
+    <li class="fc w"> </li>
+     <li class="fc b">(主顯示器)是寬( )字高( )字的文字液晶</li>
+    <li class="fc w"> </li>
+     <li class="fc c">使(主顯示器)顯示空白畫面</li>
+     <li class="fc c">使(主顯示器)顯示( )的數值</li>
+     <li class="fc c">使(主顯示器)顯示( )文字</li>
+   <li class="fc w"> </li>
+    <li class="fc c">把()的打印位置移動到第()行第()字處</li>
+   <li class="fc w"> </li>
+     <li class="fc i">以底線顯示(主顯示器)的打印位置</li>
+     <li class="fc i">以方塊顯示(主顯示器)的打印位置</li>
+     <li class="fc i">取消顯示(主顯示器)的打印位置</li>
+    <li class="fc w"> </li>
+     <li class="fc i">暫時隱藏(主顯示器)的資訊</li>
+    <li class="fc i">重新顯示(主顯示器)的資訊</li>
+</ul>
+
+
+
+<ul class="ufc">伺服
+  <!--  <li class="fc y">有使用伺服馬達</li>-->
+    <li class="fc g">名稱為( )的是顆伺服馬達</li>
+    <li class="fc b">名稱為( )的伺服馬達連接在( )且脈衝訊號範圍為(800)到(2400)微秒</li>
+    <li class="fc w"> </li>
+    <li class="fc c">把( )轉到( )度的位置</li>
+    <li class="fc i">對( )送出長度為( )微秒的脈衝訊號</li>
+</ul>
+
+
+
+<ul class="ufc">直流馬達
+   <!-- <li class="fc y">有使用直流馬達</li>
+    <li class="fc w"> </li>-->
+    <li class="fc g">接在()()名為()的是一個直流馬達</li>
+    <li class="fc g">()是左輪接在()(),右輪接在()()的二輪車底盤</li>
+    <li class="fc w"> </li>
+ <li class="fc i">開始前進</li>
+  <li class="fc i">開始後退</li>
+   <li class="fc i">煞車停止</li>
+     <li class="fc w"> </li>
+      <li class="fc i">開始原地右轉</li>
+       <li class="fc i">開始原地左轉</li>
+
+      <li class="fc w"> </li>
+       <li class="fc i">左輪開始向前</li>
+        <li class="fc i">右輪開始向前</li>
+
+       <li class="fc w"> </li>
+        <li class="fc i">左輪開始向後</li>
+         <li class="fc i">右輪開始向後</li>
+
+</ul>
+
+
+
+<ul class="ufc">步進  
+    <li class="i">(),(),()和()接的是名稱為()的步進馬達</li>
+    <li class="i">步進線和方向線接在()和()的是名稱為()的步進馬達</li>
+    <li class="fc w"> </li>
+    <li class="i">()的最高速度設為每秒()步且加速度為()步每秒平方</li>
+    <li class="fc w"> </li>
+    <li class="i">把()以加速方式轉()格後才繼續執行</li>
+    <li class="i">把()以最高速轉()格後才繼續執行</li>
+    <li class="i">把()以加速方式轉到目標格後才繼續執行</li>
+    <li class="i">把()以最高速轉到目標格後才繼續執行</li>
+    <li class="fc w"> </li>
+    <li class="i">把()的目標變成第()格</li>
+    <li class="i">把()的目標增加()格</li>
+    <li class="i">把()的目標設定在最短剎車可行位置</li>
+    <li class="fc w"> </li>
+    <li class="i">時間到了就把()以加速方式往目標旋轉一格</li>
+    <li class="i">時間到了就把()以最高速往目標旋轉一格</li>
+
+    <li class="fc w"> </li>
+    <li class="fc i">設定()現在的位置是第()格</li>
+    <li class="fc i">()現在的位置格</li>
+    <li class="fc i">()目前的目標格</li>
+    <li class="fc i">()不在目標格</li>
+    <li class="fc i">()已在目標格</li>
+
+    <li class="fc w"> </li>
+    <li class="fc i">把()斷電</li>
+    <li class="fc i">把()重新通電</li>
+    <li class="fc i">設定()的通電指示燈在第()腳</li>
+</ul>    
+<ul class="ufc">步進群組    
+    <li class="i">...是個垂直機構每次非等速去以定速走直線用的步進馬達群組</li>
+    <li class="i">名為()的步進馬達群組包括名為()()的兩個馬達</li>
+    <li class="i">把()的第一和第二個馬達的新目標格設為第()和()格</li>
+    <li class="i">時間到了就移動()的相對應馬達到下一格</li>
+    <li class="i">移動()的相對應馬達到目標格後才繼續執行</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bar" id="sensors" display="none" style="display: none;">
+
+<ul class="ufc status" id="sensors">&nbsp;&nbsp;感測&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ul>
+
+
+
+
+
+
+
+<ul class="ufc">測電壓
+    <li class="fc i">A( )目前的電壓值</li>
+</ul>
+
+<ul class="ufc">按鈕
+    <li class="fc g">名為()的是接在()和GND的按鈕</li>
+    <li class="fc i">()被按下了</li>
+    <li class="fc i">()沒被按下</li>
+</ul>
+
+
+<ul class="ufc">電容開關
+
+ <!--<li class="fc y">有使用電容開關</li>
+ <li class="fc w"> </li> -->
+    <li class="fc i">名稱為()是從()送訊號從()接收訊號的電容值測量器</li>
+    <li class="fc i">連續讀取()次電容值後取總和</li>
+    <li class="fc i">連續讀取()且次排除背景值後的電容取總和</li>
+    <li class="fc w"> </li>
+    <li class="fc i">設定為過了()毫秒後還沒測到電容值就放棄</li>
+    <li class="fc i">使()重新確定背景電容值</li>
+    <li class="fc i">設定為過了()毫秒後才再次確定背景電容值</li>
+</ul>
+
+
+<ul class="ufc">超音波
+ <!--   <li class="fc y">有使用超音波測距器</li>-->
+    <li class="fc g">()是從()發聲從()接收且測量()公分內距離的超音波測距器</li>
+    <li class="fc w"> </li>
+    <li class="fc g">()此時測到的公分距離</li>
+    <li class="fc g">()此時測到的毫米距離</li>
+    <li class="fc g">()快速測()次毫米距離後的中間值</li>
+</ul>
+
+
+<ul class="ufc">溫濕度
+  <!--  <li class="fc y">有使用溫度濕度感測器</li>-->
+    <li class="fc g">(名稱)是溫度濕度感測器</li>
+    <li class="fc g">令(名稱)從(整數)讀取溫度和濕度</li>
+    <li class="fc w"> </li>
+    <li class="fc g">(名稱)讀取到的溫度</li>
+    <li class="fc g">(名稱)讀取到的濕度</li>
+
+    <li class="fc g">溫度測棒都接在第()腳上</li>
+    <li class="fc i">讀取所有測棒溫度</li>
+    <li class="fc i">第()個測棒的溫度</li>
+</ul>
+
+
+<ul class="ufc">煙霧
+<li class="i">名為()的是觸發腳接在(),量測腳接於A()的煙霧偵測器</li>
+<li class="i"></li>
+<li class="i">()送出()次預備波後量測()次取平均的值</li>
+<li class="i"></li>
+<li class="i">()送出()次預備波後量測()次取平均換算為微克每立方米的值</li>
+</ul>
+
+
+
+<ul class="ufc">懸浮微粒
+    <li class="fc i">名稱為()從()接收()傳送的是型號為G3的懸浮微粒偵測器</li>
+    <li class="fc i">()執行偵測,讀入資料</li>
+    <li class="fc i">()目前每立方米PM1.0微克數</li>
+    <li class="fc i">()目前每立方米PM2.5微克數</li>
+    <li class="fc i">()目前每立方米PM10微克數</li>
+</ul>
+
+<ul class="ufc">磁場
+    <li class="i">()是個三軸磁場計</li>
+    <li class="i">以位址(0x1E)啟動名為()的磁場計</li>
+    <li class="i">以上下限(1,2,3,4,5,6)校正名為()的磁場計</li>
+    <li class="i"> </li>
+    <li class="i">()讀取此時的磁場值</li>
+    <li class="i">()的X方向磁場大小</li>
+    <li class="i">()的Y方向磁場大小</li>
+    <li class="i">()的Z方向磁場大小</li>
+    <li class="i"> </li>
+    <li class="i">監控()的上下限</li>
+
+</ul>
+
+<ul class="ufc">加速
+    <li class="fc i">()是接在A4和A5且AD0接GND的加速和方向模組</li>
+    <li class="fc i">()是接在A4和A5且AD0接5V的加速和方向模組</li>
+    <li class="fc i"> </li>
+    <li class="fc i">()有使用方位角仰角側翻角也使用重力方向</li>
+    <li class="fc i">()有使用加速度也使用重力方向</li>
+    <li class="fc i">()還有使用絕對座標</li>
+    <li class="fc i">()有使用原始數據</li>
+    <li class="fc i"> </li>
+    <li class="fc i">啟動名為()的加速和方向模組 </li>
+    <li class="fc i">()目前轉速的(xyz)誤差設定值 </li>
+    <li class="fc i">()目前加速度的(xyz)方向誤差設定值</li>
+    <li class="fc i">設定()的(xyz)方向轉速誤差為()</li>
+    <li class="fc i">設定()的(xyz)方向加速誤差為()</li>
+</ul>
+
+<ul class="ufc">加速
+    <li class="i">讀取()的原始數據</li>
+    <li class="i">讀取()現在的方位角仰角側翻角</li>
+    <li class="i">讀取()現在的絕對座標xyz加速度值</li>
+    <li class="i">讀取()現在的物體座標xyz加速度值</li>
+    <li class="i">讀取()現在的重力方向</li>
+    <li class="i">讀取()現在的四元數</li>
+    <li class="i"> </li>
+    <li class="i">()的方位角</li>
+    <li class="i">()的仰角</li>
+    <li class="i">()的側翻角</li>
+    <li class="i"> </li>
+    <li class="i">()的(xyz)方向的原始加速度</li>
+    <li class="i">()的(xyz)方向的原始轉速</li>
+    <li class="i">()的(xyz)方向的絕對座標加速值</li>
+    <li class="i">()的(xyz)方向的物體座標加速值</li>
+    <li class="i">()的(xyz)方向的重力值</li>
+    <li class="i">()的四元數的第(1234)分量</li>
+</ul>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bar" id="infos" display="none" style="display: none;">
+
+<ul class="ufc status" id="infos">&nbsp;&nbsp;資訊&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ul>
+
+
+
+
+<ul class="ufc">輸出
+    <li class="fc b">啟動USB以及TXRX的對外通訊,頻率為(9600)</li>
+    <li class="fc w"> </li>
+    <li class="fc c">送出(hello world)文字且換行</li>
+    <li class="fc c">以文字格式送出( )的數值且換行</li>
+    <li class="fc c">以十六進位文字格式送出( )的數值且換行</li>
+    <li class="fc w"> </li>
+    <li class="fc c">送出(hello world)文字</li>
+    <li class="fc c">以文字格式送出( )的數值</li>
+    <li class="fc c">以二進位格式送出()的值</li>
+    <li class="fc c">以十六進位文字格式送出( )的數值</li>
+    <li class="fc w"> </li>
+    <li class="fc i">結束USB以及TXRX的對外通訊</li>
+</ul>
+
+
+
+
+<ul class="ufc">接收
+    <li class="fc i">啟動對外通訊,頻率為(9600)</li>
+    <li class="fc w"> </li>
+
+
+    <li class="fc i">任何讀取若超過千分之( )秒還沒找到就不找了</li>
+    <li class="fc i">月台裡有資料了</li>
+    <li class="fc i">月台裡的資訊格數</li>
+    <li class="fc i">開始出月台抓取出一個有小數的數(取出後馬上停止出月台)</li>
+    <li class="fc i">開始出月台抓取出第一個整數,以大整數存(取出後馬上停止出月台)</li>
+    <li class="fc i">開始出月台忽略文字( )後抓到的第一個整數,以大整數存(取出後馬上停止出月台)</li>
+    <li class="fc i">目前月台上的第一個字,該字此時會離開月台</li>
+    <li class="fc i">目前月台上的第一個字,該字此時不會離開月台</li>
+    <li class="fc i">目前月台上所有的字</li>
+    <li class="fc i">目前月台上直到文字( )之前所有的字</li>
+    <li class="fc i">月台裡有文字( )</li>
+    <li class="fc i">月台裡有文字( )在文字( )之前</li>
+    <li class="fc w"> </li>
+    <li class="fc i">結束對外通訊</li>
+</ul>
+
+
+
+
+
+<ul class="ufc">紅外遙控
+  <!--  <li class="fc y">有使用紅外光遙控</li>
+    <li class="fc w"> </li>-->
+    <li class="fc i">( )接的是紅外光遙控接收器</li>
+    <li class="fc i">啟動接收紅外光訊號功能</li>
+    <li class="fc i">有收到紅外光訊號</li>
+    <li class="fc w"> </li>
+    <li class="fc i">收到的紅外光訊號種類</li>
+    <li class="fc i">收到的紅外光訊號值</li>
+    <li class="fc i">收到的紅外光訊號長度</li>
+    <li class="fc i">傳出收到的紅外光訊號資訊總覽</li>
+    <li class="fc w"> </li>
+    <li class="fc i">準備再次接收紅外光訊號</li>
+    <li class="fc w"> </li>
+    <li class="fc i">啟動輸出紅外光訊號功能</li>
+    <li class="fc c">從3送出種類為( )十進位值為( )的( )位元紅外光訊號</li>
+    <li class="fc c">從3送出種類為( )十六進位值為( )的( )位元紅外光訊號</li>
+</ul>
+
+<ul class="ufc">非同步
+
+    <li class="i">名為()的非同步收發通訊於()接收且於()發送</li>
+    <li class="i">名為()的非同步收發通訊於()接收且於()發送,且高低訊號相反</li>
+    <li class="fc w"> </li>
+    <li class="i">以鮑率()啟動名為()的非同步收發通訊</li>    
+    <li class="i">()的任何讀取若超過千分之()秒還沒找到就不找了</li>
+    <li class="fc w"> </li>
+    <li class="fc i">輪到()預備接收，並丟棄其他通訊處之前接收到的資料</li>
+    <li class="fc i">是輪到()接收的話</li>
+    <li class="fc i">()有新資料漏接(月台擠超過64格)的話</li>
+    <li class="fc w"> </li>
+    <li class="fc i">從()以文字格式送出()的數值</li>
+    <li class="fc i">從()以二進位格式送出()的值</li>
+    <li class="fc i">從()以文字格式送出()的數值且換行</li>
+    <li class="fc i">從()送出()文字</li>
+    <li class="fc i">從()送出()文字且換行</li>
+</ul>
+
+
+<ul class="ufc">非同步
+
+    <li class="i">()的月台裡的資訊格數</li>
+    <li class="i">()的月台裡有資料了</li>    
+    <li class="fc i">目前()的月台上的第一個字,該字此時會離開月台</li>
+    <li class="fc i">目前()的月台上的第一個字,該字此時不會離開月台</li>
+    <li class="fc w"> </li>    
+    <li class="i">()開始出月台抓取出一個有小數的數(取出後馬上停止出月台)</li>
+    <li class="i">()開始出月台抓取出第一個整數,以大整數存(取出後馬上停止出月台)</li>
+    <li class="i">()開始出月台忽略文字()後抓到的第一個整數,以大整數存(取出後馬上停止出月台)</li>
+    <li class="fc w"> </li>
+    <li class="i">目前()的月台上所有的字</li>
+    <li class="i">目前()的月台上直到文字()之前所有的字</li>
+    <li class="i">()的月台裡有文字()在文字()之前</li>
+    <li class="i">()的月台裡有文字()</li>
+
+</ul>
+
+
+<ul class="ufc">橋接
+<li class="fc i">...是另一台連上Blynk的機器,由此app內的V...腳遙控</li>
+<li class="fc i">機器()的授權碼是()</li>
+<li class="fc w"></li>
+<li class="fc i">把()的第()腳變成有電</li>
+<li class="fc i">把()的第()腳變成沒電</li>
+<li class="fc w"></li>
+<li class="fc w"></li>
+<li class="fc i">傳送()的數值到()的A()腳</li>
+<li class="fc i">傳送()的數值到()的V()腳</li>
+<li class="fc i">傳送文字()到()的V()腳</li>
+</ul>
+
+
+
+<ul class="ufc">Blynk
+<!--<li class="fc i">有使用ESP8266和Blynk</li>-->
+<li class="fc b">從名稱為()密碼為()的WIFI連線到授權碼為()的Blynk專案</li>
+<li class="fc b">連上後取得所有參數</li>
+<li class="fc w"> </li>
+<li class="fc i">和Blynk應用程式交換資訊</li>
+<li class="fc w"> </li>
+<li class="fc g">從2和3腳啟動Blynk監視功能</li>
+</ul>
+
+
+<ul class="ufc">收值
+<li class="fc i">Blynk應用程式更動V...腳後執行下框
+    {
+    }
+  </li>
+<li class="fc w"> </li>
+<li class="fc i">視為整數的該腳值</li>
+<li class="fc i">視為有小數的該腳值</li>
+<li class="fc i">視為有精密小數的該腳值</li>
+<li class="fc i">視為文字的該腳值</li>
+<li class="fc w"> </li>
+<li class="fc i">視為整數的該腳第()個值</li>
+<li class="fc i">視為有小數的該腳第()個值</li>
+<li class="fc i">視為有精密小數的該腳第()個值</li>
+<li class="fc i">視為文字的該腳第()個值</li>
+<li class="fc w"> </li>
+</ul>
+
+
+<ul class="ufc">傳值
+<li class="fc i">下框上傳資料到Blynk的V...腳
+    {
+    }
+</li>
+<li class="fc i">把()的值傳到Blynk的V...腳上</li>
+
+<li class="fc w"> </li>
+<li class="fc i">()是Blynk上的LCD且虛擬腳是V...</li>
+<li class="fc i">使名為()的Blynk液晶從第()行第()個字開始顯示()文字</li>
+<li class="fc i">使名為()的Blynk液晶從第()行第()個字開始顯示()的值</li>
+<li class="fc c">使()顯示空白畫面</li>
+
+<li class="fc w"> </li>
+<li class="fc i">...是一個接在V...腳上的通訊視窗</li>
+<li class="fc i">從()以文字格式送出()的值到Blynk上</li>
+<li class="fc i">從()以文字格式送出()的值到Blynk上並換行</li>
+<li class="fc i">等待()送完資料才繼續</li>
+<li class="fc w"> </li>
+<li class="fc i">使Blynk跳出通知文字()</li>
+<li class="fc w"> </li>
+
+
+<li class="fc i">寄標題為文字()內容為文字()的email到()</li>
+<li class="fc i">寄標題為()資訊內容為()資訊的email到()</li>
+</ul>
+
+
+
+
+
+
+<div>
+
+
+<script>
+
+
+
+
+/*
+
+    //切換進階輸入面板和基本輸入面板
+
+    $("#adv_insert_bar").hide() //預先隱藏進階面板
+    $("#very_adv_insert_bar").hide() //預先隱藏進階面板
+
+
+    $(".to_basic").mouseenter(function(){$("#adv_insert_bar").hide();$("#very_adv_insert_bar").hide();$("#insert_bar").show()})
+    $(".to_adv").mouseenter(function(){$("#insert_bar").hide();$("#very_adv_insert_bar").hide();$("#adv_insert_bar").show()})
+    $(".to_very_adv").mouseenter(function(){$("#insert_bar").hide();$("#adv_insert_bar").hide();$("#very_adv_insert_bar").show()})
+
+*/
+
+
+
+
+//$(#"div").click(function(e){e.preventDefault;})
+
+
+/*
+
+    $(".to_basic").hover(function()
+      {timer = setTimeout(function() {
+      $("#adv_insert_bar").hide();$("#very_adv_insert_bar").hide();$("#insert_bar").fadeIn()
+      }, delay);      }, function() {clearTimeout(timer);
+      })
+
+    $(".to_adv").hover(function()
+      {timer = setTimeout(function() {
+        $("#insert_bar").hide();$("#very_adv_insert_bar").hide();$("#adv_insert_bar").fadeIn()
+        }, delay);      }, function() {clearTimeout(timer);
+      })
+    $(".to_very_adv").hover(function()
+      {timer = setTimeout(function() {
+        $("#insert_bar").hide();$("#adv_insert_bar").hide();$("#very_adv_insert_bar").fadeIn()
+        }, delay);      }, function() {clearTimeout(timer);
+      })
+
+
+*/
+
+
+
+/*
+
+var timer;
+var delay = 1000;
+
+$('#element').hover(function() {
+    // on mouse in, start a timeout
+
+    timer = setTimeout(function() {
+        // do your stuff here
+    }, delay);
+}, function() {
+    // on mouse out, cancel the timer
+    clearTimeout(timer);
+});
+
+*/
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="caret_position" style="display:none">0</div>
+<div id="special_key_down_index" style="display:none">0</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+//$("#container").focus()
+//highlight()
+
+
+// already done with copy() and inverse_copy() functions
+/*
+document.getElementById("container").innerHTML = turn_slash_n_to_br_tag(document.getElementById("container").innerHTML)
+
+$(document).ready(function(){highlight()})
+*/
+
+
+
+
+//-------------functions below
+
+
+// onkeydown = "setTimeout(function(){highlight();getCaret_innerHTML();consolelog();},20)"
+    //onclick = "setTimeout(function(){highlight();getCaret_innerHTML();consolelog();},10)"
+
+
+
+//initialize history
+
+var edit_history = []
+
+var undo_index = 0
+
+var history_dummy
+
+edit_history.push($("#container").html())
+
+
+/* under construction for other browser.
+
+$("#container").keyup(function(e){
+
+
+        console.log("special key up")
+
+    document.getElementById("special_key_down_index").innerHTML="0"
+
+     console.log("special_key_down_index = " + document.getElementById("special_key_down_index").innerHTML)
+
+})
+
+*/
+
+
+/*
+$("#container").keyup(function(e) {
+
+
+  if(e.keyCode==16||e.keyCode==17||e.keyCode==18)
+  {
+
+        var ide = document.getElementById('ide')
+       
+        if(ide)
+            {
+
+            var innerDoc = ide.contentDocument || ide.contentWindow.document;
+
+
+            innerDoc.getElementById("special_key_down_index").innerHTML = 0
+            console.log("special key down index = " + innerDoc.getElementById("special_key_down_index").innerHTML)
+       
+            }
+                
+        else {
+
+            document.getElementById("special_key_down_index").innerHTML = 0 
+            console.log("special key down index = " + document.getElementById("special_key_down_index").innerHTML)
+             }
+
+//       console.log("special key up")
+
+}
+
+})
+
+*/
+
+
+$("#container").keydown(function(e) {
+    // trap the return key being pressed
+
+
+
+/* under construction for other browser.
+
+//change index if special key pressed to prevent replacing caret
+if(e.ctrlKey || e.shiftKey)
+{
+    console.log("special key down")
+
+document.getElementById("special_key_down_index").innerHTML="1"
+
+ console.log("special_key_down_index = " + document.getElementById("special_key_down_index").innerHTML)
+
+}
+
+*/
+
+
+// ctrl shift alt pushed
+/*
+ if(e.keyCode==16||e.keyCode==17||e.keyCode==18)
+  {
+
+        var ide = document.getElementById('ide')
+       
+        if(ide)
+            {
+
+            var innerDoc = ide.contentDocument || ide.contentWindow.document;
+
+
+            innerDoc.getElementById("special_key_down_index").innerHTML = 1
+            console.log("special key down index = " + innerDoc.getElementById("special_key_down_index").innerHTML)
+       
+            }
+                
+        else {
+
+                  document.getElementById("special_key_down_index").innerHTML = 1 
+                  console.log("special key down index = " + document.getElementById("special_key_down_index").innerHTML)
+
+                }
+     //  console.log("special key down")
+
+}
+
+else{setTimeout(function(){highlight()},20)}
+
+*/
+
+
+if(e.keyCode<37||e.keyCode>40)  //key other than arrow key pushed
+{setTimeout(function(){highlight()},20)}
+
+ 
+//check if ctrl pressed first
+  if(e.ctrlKey)
+  {
+      if (e.keyCode == 90 )  // ctrl + z pushed
+      {
+        e.preventDefault()
+        //document.execCommand('undo')
+
+            history_dummy = undo_history(edit_history,undo_index)
+
+            edit_history = history_dummy[0]
+            undo_index = history_dummy[1]
+
+      //  highlight()
+
+        return true;   //end here
+
+
+      }
+
+      if (e.keyCode == 89 )  // ctrl + y pushed
+      {
+
+        e.preventDefault()
+        //document.execCommand('redo')
+
+            history_dummy = redo_history(edit_history,undo_index)
+
+            edit_history = history_dummy[0]
+            undo_index = history_dummy[1]
+
+
+
+      //  highlight()
+
+        return true;  //end here
+
+      }
+
+
+      if (e.keyCode == 86 )  // ctrl + v pushed
+
+
+          setTimeout(function(){
+
+                history_dummy = push_edit_history(edit_history,undo_index)
+
+                edit_history = history_dummy[0]
+                undo_index = history_dummy[1]
+
+            }, 20);  // besure the contents changes first
+
+      return true;  //end here
+
+
+
+   }
+
+
+if (e.altKey)
+
+  {
+      if (e.keyCode == 84 )  // alt + t pushed ,do local ch2eng debugging  , or monitor div contents
+
+chCompile_local()
+
+/*
+console.log("container innerHTML")
+console.log($("#container").html())
+console.log("highlight innerHTML")
+console.log($("#highlight").html())
+*/
+
+
+      return true;  //end here
+}
+
+
+
+
+
+    if (!e.ctrlKey)
+    {
+
+        if (e.keyCode === 13) {   //enter pressed
+
+          document.execCommand('insertHTML', false, "\n");
+          // prevent the default behaviour of return key pressed
+
+      //    highlight()
+
+             return false;
+        }
+
+        else if(e.keyCode >40 || e.keyCode <37)  // key other than arraw key(37~40) are pushed  (other functional key will be ignored by comparing contents in the function)
+         {
+
+       //   highlight()
+
+
+
+
+          setTimeout(function(){
+
+                history_dummy = push_edit_history(edit_history,undo_index)
+
+                edit_history = history_dummy[0]
+                undo_index = history_dummy[1]
+
+            }, 20);  // besure the contents changes first
+
+            return true
+
+         }
+
+       else
+          {
+
+       //     highlight()
+
+        return true
+
+          }
+
+
+
+    if (e.keyCode === 9) {   //tab pressed
+
+          document.execCommand('insertHTML', false, "    ");
+          // prevent the default behaviour of return key pressed
+
+      //    highlight()
+
+             return true;
+        }
+        else
+        {  //highlight()
+
+            return true;  //end here
+        }
+
+
+    }
+
+
+});
+
+
+
+
+
+// ctrl + v and paste function
+
+/*
+$('[contenteditable]').on('paste', function (e) {
+
+var x = document.getElementById("container")
+
+
+
+//setTimeout(function(){console.log(x.innerHTML);x.innerHTML = x.innerHTML.replace(/\</g,"&lt").replace(/\>/g,"&gt") ;console.log(x.innerHTML)},100)
+
+
+setTimeout(highlight(),200)
+
+});
+*/
+
+
+
+/////////////
+
+// CTRL + V  ctrl + v  defensive code here
+
+document.querySelector("pre[contenteditable]").addEventListener("paste", function(e) {
+    e.preventDefault();
+    var text = e.clipboardData.getData("text/plain");
+
+
+if(!/<\/pre|<div|<\/div/g.test(text))
+  {
+
+
+
+    document.execCommand("insertText", false, text.replace(/\n/g,"毉"))
+
+    document.getElementById("container").innerHTML = document.getElementById("container").innerHTML.replace(/毉/g,"\n")
+
+highlight()
+
+
+  }
+else
+{
+  alert("there's illeagle tag inside codes! pasting forbiddened")
+}
+
+})
+
+
+
+//});
+
+/*
+
+setTimeout(function(){console.log(x.innerHTML);x.innerHTML = x.innerText ;console.log(x.innerHTML)},100)
+
+
+setTimeout(highlight(),200)
+*/
+
+
+
+
+$(document).bind('keydown', function(e){
+
+
+ if(e.ctrlKey && (e.which == 83))   // ctrl + s pushed only catched by keydown
+
+ {
+   e.preventDefault();
+      window.parent.document.getElementById("save_work").click()
+   return true;
+ }
+
+
+
+ if(e.ctrlKey && (e.which == 68))   // ctrl + d , auto align and show indicator
+
+ {
+   e.preventDefault();
+   bracket_align()
+   document.getElementById("align_indicate").innerHTML = "1"
+   //document.getElementById("align_indicate_change_code").innerHTML = "1"
+   setTimeout(function(){document.getElementById("align_indicate").innerHTML = "0" ; },5000)
+   //setTimeout(function(){document.getElementById("align_indicate_change_code").innerHTML = "0" ; },50)
+   highlight()
+
+   return true;
+ }
+
+
+
+
+
+
+})
+
+
+
+
+
+
+
+
+/*
+
+
+
+document.getElementById("container").addEventListener("wheel", change_font_size(e2))
+
+
+$(document).bind('keyup', function(){  document.getElementById("container").removeEventListener("wheel",change_font_size(e2))
+
+
+
+
+function change_font_size(e2)
+{
+e2.stopPropagation()
+e2.preventDefault()
+
+  //$("#").style.height = "80%";
+
+}
+
+*/
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+<script>
+
+
+
+$(document).ready(function(){ $("li").mousedown(function(event){
+    event.stopPropagation();
+     event.preventDefault();
+
+     document.execCommand('insertHTML', false, event.target.innerHTML)
+
+
+
+   setTimeout(function(){
+
+                history_dummy = push_edit_history(edit_history,undo_index)
+
+                edit_history = history_dummy[0]
+                undo_index = history_dummy[1]
+
+            }, 20);  // besure the contents changes first
+
+
+
+     highlight()
+
+
+       }    ); });
+
+$(document).ready(function(){ $("ul").mousedown(function(event){
+    event.stopPropagation();
+     event.preventDefault();
+
+       }    ); });
+
+
+
+
+
+
+
+var status_now = 1
+
+$(document).ready(function(){ $(".status").mousedown(function(event){
+    event.stopPropagation();
+     event.preventDefault();
+
+
+    switch(status_now)
+    {
+        case 0:
+        //$("#adv_insert_bar").hide();$("#very_adv_insert_bar").hide();$("#insert_bar").fadeIn()
+        $(".bar").hide();$("#insert_bar").fadeIn()
+        status_now += 1
+        break
+        
+        case 1:
+        //$("#insert_bar").hide();$("#very_adv_insert_bar").hide();$("#adv_insert_bar").fadeIn()
+        $(".bar").hide();$("#sensors").fadeIn()
+        status_now += 1
+        break
+
+        case 2:
+        //$("#insert_bar").hide();$("#very_adv_insert_bar").hide();$("#adv_insert_bar").fadeIn()
+        $(".bar").hide();$("#mechs").fadeIn()
+        status_now += 1
+        break
+
+        case 3:
+        //$("#insert_bar").hide();$("#very_adv_insert_bar").hide();$("#adv_insert_bar").fadeIn()
+        $(".bar").hide();$("#infos").fadeIn()
+        status_now = 0
+        break
+
+
+    }
+ }    ); });
+
+ 
+/*  old separate switching bottons
+
+$(document).ready(function(){ $(".to_basic").mousedown(function(event){
+    event.stopPropagation();
+     event.preventDefault();
+
+     $("#adv_insert_bar").hide();$("#very_adv_insert_bar").hide();$("#insert_bar").fadeIn()
+
+       }    ); });
+
+$(document).ready(function(){ $(".to_adv").mousedown(function(event){
+    event.stopPropagation();
+     event.preventDefault();
+
+      $("#insert_bar").hide();$("#very_adv_insert_bar").hide();$("#adv_insert_bar").fadeIn()
+
+       }    ); });
+
+$(document).ready(function(){ $(".to_very_adv").mousedown(function(event){
+    event.stopPropagation();
+     event.preventDefault();
+
+    $("#insert_bar").hide();$("#adv_insert_bar").hide();$("#very_adv_insert_bar").fadeIn()
+
+       }    ); });
+*/
+
+
+var timer;
+
+var delay = 300;
+var delay2 = 300;
+
+    $(".bar").hide() //預先隱藏面板
+    $("#insert_bar").fadeIn()  //預先面板
+
+
+
+
+
+</script>
+
+
+<!-- </body> -->
+<!-- </html>
+</body>
+</html>
+
+
+--></div></div></body></html>
